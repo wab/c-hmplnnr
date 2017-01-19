@@ -1,0 +1,23 @@
+$header-height: rem-calc(80) !default;
+$header-padding: rem-calc(5);
+
+.mainheader {
+  background-color: $light-gray;
+  background-image:
+    linear-gradient(
+      to right,
+      $white, $light-gray
+    );
+  height: $header-height;
+  padding: $header-padding;
+  @include flex;
+  @include flex-align(justify, middle);
+}
+
+.brand {
+  display: block;
+}
+
+.logo {
+  height: calc( #{$header-height} - (2 * #{$header-padding}));
+}
