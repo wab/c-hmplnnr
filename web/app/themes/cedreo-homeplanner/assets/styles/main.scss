@@ -1,4 +1,4 @@
-@import "common/variables";
+@import "common/settings";
 
 // Import npm dependencies
 @import "~foundation-sites/scss/foundation";
@@ -10,6 +10,7 @@
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
+@import "components/icons";
 @import "components/wp-classes";
 @import "layouts/header";
 @import "layouts/navigation";

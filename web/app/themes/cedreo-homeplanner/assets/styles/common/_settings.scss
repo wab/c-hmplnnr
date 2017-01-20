@@ -1,0 +1,48 @@
+$enable-flex:           false;
+$main-small-columns:       12;
+$sidebar-small-columns:    4;
+
+$headerHeight: 80px;
+
+$global-transition: 300ms ease;
+
+// Font Awesome | see: http://fontawesome.io/get-started/
+$fa-font-path:          '~font-awesome/fonts';
+
+// 1. Global
+// ---------
+
+$global-font-size: 100%;
+$global-width: rem-calc(1200);
+$global-lineheight: 1.5;
+$foundation-palette: (
+  primary: #2da8a4,
+  secondary: #2b4d7e,
+  primary-light: #58cbb7,
+  primary-dark: #2585a1,
+  secondary-light: #1c739b,
+  secondary-dark: #1e3658,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc0015,
+  focus: #c80d77,
+  white: #fff
+);
+$secondary-color: map-get($foundation-palette, secondary);
+$light-gray: #eaeef3;
+$medium-gray: #999;
+$dark-gray: #162637;
+$black: #0d1823;
+$white: #fff;
+$body-background: $white;
+$body-font-color: $dark-gray;
+$body-font-family: 'Raleway', Helvetica, Roboto, Arial, sans-serif;
+$body-antialiased: true;
+$global-margin: 1rem;
+$global-padding: 1.5rem;
+$global-weight-normal: normal;
+$global-weight-bold: bold;
+$global-radius: 0;
+$global-text-direction: ltr;
+$global-flexbox: false;
+$print-transparent-backgrounds: true;

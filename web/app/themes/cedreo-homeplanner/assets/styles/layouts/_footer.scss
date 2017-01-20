@@ -1,0 +1,138 @@
+.mainfooter {
+  background-color: $dark-gray;
+  background-size: cover;
+  color: $white;
+}
+
+.ours {
+  padding: $global-padding 0;
+  background: $black;
+  a {
+    color: inherit;
+    display: inline-block;
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: currentColor;
+      transition: width 200ms ease-out;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.widget--area {
+  padding: $global-padding 0;
+  @include grid-row;
+
+  .widget {
+    @include grid-column;
+
+    @include breakpoint(medium) {
+      @include grid-column-size(3);
+    }
+  }
+}
+
+.widget--title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  &:after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: $primary-color;
+    margin: 1em 0;
+  }
+}
+
+.widget--item {
+  margin-bottom: 1rem;
+}
+
+.widget {
+  .post--title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+.nav-footer--item {
+  position: relative;
+  margin-bottom: .5em;
+
+  [class^="icon"]{
+    margin-right: .3em;
+    width: 1.6rem;
+    height: 1.6rem;
+    position: relative;
+    top: .5em;
+    color: $primary-color;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.widget_recent_entries {
+  ul {
+    @extend .no-bullet;
+    li {
+
+      display: flex;
+      align-items: center;
+
+      a {
+        color: inherit;
+        order: 2;
+      }
+
+      .post-date {
+        color: $primary-color;
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        max-width: 2em;
+        margin-right: 1em;
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.reseaux--list {
+  margin-bottom: 0;
+}
+.reseaux--item {
+  display: inline-block;
+  margin: 0 0.1em;
+}
+.reseaux--link {
+  display: inline-block;
+  padding: 0.5em;
+  color: inherit;
+  background: $primary-color;
+  line-height: 0;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: all 200ms ease;
+
+  &:hover, &:focus {
+    color: $white;
+    background: darken($primary-color, 10%);
+  }
+
+  [class^="icon-"], [class*="icon-"] {
+    width: 1em;
+  }
+}
