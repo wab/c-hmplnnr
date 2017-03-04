@@ -136,7 +136,6 @@
     "deliciousbrains/wp-migrate-db-pro": "*",
     "deliciousbrains/wp-migrate-db-pro-media-files": "*",
     "deliciousbrains/wp-migrate-db-pro-cli": "*",
-    "wpackagist-plugin/wp-migrate-db": "^0.9",
     "wpackagist-plugin/advanced-custom-fields": "^4",
     "wpackagist-plugin/autodescription": "^2.7",
     "wpackagist-plugin/polylang": "^2",
