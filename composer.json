@@ -146,7 +146,8 @@
     "wpackagist-plugin/google-sitemap-generator": "^4",
     "wpackagist-plugin/wordpress-seo": "^4",
     "wpackagist-plugin/breadcrumb-navxt": "^5",
-    "wpackagist-plugin/wordpress-importer": "^0.6"
+    "wpackagist-plugin/jetpack": "^4.6",
+    "wpackagist-plugin/vaultpress": "^1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

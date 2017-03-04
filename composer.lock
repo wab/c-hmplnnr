@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6e16cdd7e95f77db151ee06646c12d77",
-    "content-hash": "e7a5584d150c918172e442f71ceae71f",
+    "hash": "7a53fed0431f172e41cabdc087d3574f",
+    "content-hash": "79f5977dfa20262abaa7f0aeba39cf7a",
     "packages": [
         {
             "name": "composer/installers",
@@ -555,6 +555,26 @@
             "homepage": "https://wordpress.org/plugins/google-sitemap-generator/"
         },
         {
+            "name": "wpackagist-plugin/jetpack",
+            "version": "4.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/jetpack/",
+                "reference": "tags/4.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.4.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/jetpack/"
+        },
+        {
             "name": "wpackagist-plugin/ninja-forms",
             "version": "3.0.30",
             "source": {
@@ -635,16 +655,16 @@
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
         },
         {
-            "name": "wpackagist-plugin/wordpress-importer",
-            "version": "0.6.3",
+            "name": "wpackagist-plugin/vaultpress",
+            "version": "1.8.6",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
-                "reference": "tags/0.6.3"
+                "url": "https://plugins.svn.wordpress.org/vaultpress/",
+                "reference": "tags/1.8.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/vaultpress.1.8.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -652,7 +672,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wordpress-importer/"
+            "homepage": "https://wordpress.org/plugins/vaultpress/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
