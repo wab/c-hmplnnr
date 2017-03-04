@@ -5,3 +5,7 @@ button {
 %container {
   @include grid-column-row;
 }
+
+.main {
+  overflow: hidden;
+}

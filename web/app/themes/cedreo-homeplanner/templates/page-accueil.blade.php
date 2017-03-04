@@ -6,27 +6,22 @@
 
 @section('content')
   @while(have_posts()) @php(the_post())
-    @include('partials.page-header')
+    @if( have_rows('carousel') )
+      <div class="owl-carousel">
+        @while ( have_rows('carousel') ) @php(the_row())
+          <div class="carousel-item" style="background-image: url(@php(the_sub_field('image')))">
+            <div class="carousel-item-heading">
+              @php(the_sub_field('heading'))
+              @if (get_sub_field('tagline'))
+                <div class="carousel-item-tagline">
+                  @php(the_sub_field('tagline'))
+                </div>
+              @endif
+            </div>
+          </div>
+        @endwhile
+      </div>
+    @endif
     @include('partials.content-page')
   @endwhile
-  <?php
-
-  // check if the repeater field has rows of data
-  if( have_rows('sections') ):
-
-    // loop through the rows of data
-      while ( have_rows('sections') ) : the_row();
-
-          // display a sub field value
-          the_sub_field('title');
-
-      endwhile;
-
-  else :
-
-      // no rows found
-
-  endif;
-
-  ?>
 @endsection

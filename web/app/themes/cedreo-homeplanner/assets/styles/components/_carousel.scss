@@ -1,0 +1,22 @@
+@import "~owl.carousel/src/scss/owl.carousel";
+
+$carousel-height: rem-calc(400);
+
+.carousel {
+
+  &-item {
+    min-height: $carousel-height;
+    background-size: cover;
+    background-position: center;
+    @include flex;
+    @include flex-align(right, bottom);
+
+    &-heading {
+      padding: $global-padding;
+      background: rgba($black, 0.8);
+      color: $white;
+      margin: 2rem;
+      flex-basis: 40%;
+    }
+  }
+}
