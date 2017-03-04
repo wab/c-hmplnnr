@@ -2,7 +2,7 @@ $enable-flex:           false;
 $main-small-columns:       12;
 $sidebar-small-columns:    4;
 
-$headerHeight: 80px;
+$headerHeight: rem-calc(80);
 
 $global-transition: 300ms ease;
 
@@ -38,11 +38,33 @@ $body-background: $white;
 $body-font-color: $dark-gray;
 $body-font-family: 'Raleway', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
-$global-margin: 1rem;
-$global-padding: 1.5rem;
+$global-margin: 2rem;
+$global-padding: 2rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 0;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
+
+$header-sizes: (
+  small: (
+    'h1': 24,
+    'h2': 20,
+    'h3': 19,
+    'h4': 18,
+    'h5': 17,
+    'h6': 16,
+  ),
+  medium: (
+    'h1': 48,
+    'h2': 34,
+    'h3': 31,
+    'h4': 25,
+    'h5': 20,
+    'h6': 16,
+  ),
+);
+$header-color: inherit;
+$header-lineheight: 1.4;
+$header-margin-bottom: 0.5rem;

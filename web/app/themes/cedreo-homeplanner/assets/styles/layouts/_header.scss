@@ -8,14 +8,19 @@ $header-padding: rem-calc(5);
       to right,
       $white, $light-gray
     );
-  height: $header-height;
-  padding: $header-padding;
-  @include flex;
-  @include flex-align(justify, middle);
+
+
+  .container {
+    height: $header-height;
+    @include grid-column-row;
+    @include flex;
+    @include flex-align(right, middle);
+  }
 }
 
 .brand {
   display: block;
+  margin-right: auto;
 }
 
 .logo {

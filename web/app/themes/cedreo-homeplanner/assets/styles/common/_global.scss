@@ -1,3 +1,7 @@
 button {
   cursor: pointer;
 }
+
+%container {
+  @include grid-column-row;
+}

@@ -1,0 +1,45 @@
+$page-header-height: rem-calc(200);
+
+.page-header {
+  padding: $global-padding 0;
+  height: $page-header-height;
+  background-color: $dark-gray;
+  margin-bottom: $global-margin;
+  @include flex;
+  @include flex-align(center, middle);
+}
+
+.page-heading {
+  font-size: rem-calc(32);
+  font-weight: bold;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.page-title {
+  font-size: rem-calc(32);
+  font-weight: bold;
+}
+.page-section {
+  padding: $global-padding 0;
+
+  &-title {
+    font-size: rem-calc(28);
+    font-weight: bold;
+  }
+
+  &-thumb {
+    @include thumbnail;
+    float: left;
+    margin: 0 $global-padding $global-padding 0;
+  }
+
+  &:nth-child(2n + 1) {
+    background: $light-gray;
+
+    .page-section-thumb {
+      float: right;
+      margin: 0 0 $global-padding $global-padding;
+    }
+  }
+}
