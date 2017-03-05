@@ -1,4 +1,7 @@
-@import "~owl.carousel/src/scss/owl.carousel";
+@import "~owl.carousel/src/scss/core";
+@import '~owl.carousel/src/scss/animate';
+@import '~owl.carousel/src/scss/autoheight';
+@import '~owl.carousel/src/scss/lazyload';
 
 $carousel-height: rem-calc(400);
 
