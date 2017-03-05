@@ -2,8 +2,22 @@ button {
   cursor: pointer;
 }
 
+%spacereset {
+  margin: 0;
+  padding: 0;
+}
+
+%nobullet {
+  @extend %spacereset;
+  list-style-type: none;
+}
+
 %container {
   @include grid-column-row;
+}
+
+.container {
+  @extend %container;
 }
 
 .main {

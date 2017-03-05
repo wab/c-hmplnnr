@@ -43,3 +43,36 @@ $page-header-height: rem-calc(200);
     }
   }
 }
+
+// Page d'accueil
+
+.home {
+  .heading {
+    padding-top: $global-padding;
+    @include flex-grid-row;
+    @include flex-align(center, middle);
+
+    &-intro {
+      text-align: center;
+    }
+
+    &-column {
+      text-align: justify;
+      @include flex-grid-column(6);
+    }
+  }
+
+  .arguments {
+    &-items {
+      @extend %nobullet;
+      @include flex-grid-row;
+      @include flex-align(center, middle);
+      li {
+        text-align: center;
+        font-size: rem-calc(20);
+        font-weight: bold;
+        @include flex-grid-column(2);
+      }
+    }
+  }
+}

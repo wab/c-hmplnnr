@@ -1,0 +1,4 @@
+.cta-button {
+  @include button;
+  font-size: rem-calc(20);
+}

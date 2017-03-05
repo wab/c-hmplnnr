@@ -24,13 +24,31 @@
       </div>
     @endif
     {{-- Heading section --}}
-    <div class="heading">
-      <h1 class="heading-title">@php(the_field('titre'))</h1>
-      <p><a href="" class="button large">Démonstration</a></p>
+    <div class="container">
+      <div class="heading">
+        <div class="heading-intro">
+          @if (get_field('titre'))
+            <h1 class="page-title">@php(the_field('titre'))</h1>
+          @endif
+          <a href="#" class="cta-button">Démonstration</a>
+        </div>
+        <div class="heading-column">
+          @php(the_content())
+        </div>
+        <div class="heading-column">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio minima nihil, sequi architecto obcaecati corrupti facere sunt ex maiores perspiciatis. Fuga molestiae voluptatum, voluptatibus laborum itaque officia repellendus reprehenderit amet.</p>
+        </div>
+      </div>
     </div>
-    {{-- description & démo --}}
-    <section class="page-section">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A iste cumque consequatur, minus doloremque harum rem tenetur, magni vero maiores nemo commodi voluptas temporibus. Repellat ipsum quos quod, minima earum?</p>
+    <section class="page-section arguments">
+      <ul class="arguments-items">
+        <li>Simple</li>
+        <li>Rapide</li>
+        <li>Intuitif</li>
+        <li>Innovant</li>
+        <li>Esthétique</li>
+        <li>Valorisant</li>
+      </ul>
     </section>
     {{-- Clients --}}
     <section class="page-section">
@@ -58,6 +76,5 @@
         @endwhile
       </div>
     </section>
-    @include('partials.content-page')
   @endwhile
 @endsection
