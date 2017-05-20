@@ -1,80 +1,67 @@
 {{--
-  Template Name: Page d'accueil
+  Template Name: Accueil
 --}}
 
 @extends('layouts.base')
 
 @section('content')
+
   @while(have_posts()) @php(the_post())
-    {{-- Carousel --}}
-    @if( have_rows('carousel') )
-      <div class="owl-carousel main-carousel">
-        @while ( have_rows('carousel') ) @php(the_row())
-          <div class="carousel-item" style="background-image: url(@php(the_sub_field('image')))">
-            <div class="carousel-item-heading">
-              @php(the_sub_field('heading'))
-              @if (get_sub_field('tagline'))
-                <div class="carousel-item-tagline">
-                  @php(the_sub_field('tagline'))
-                </div>
-              @endif
-            </div>
-          </div>
-        @endwhile
-      </div>
-    @endif
-    {{-- Heading section --}}
-    <div class="container">
-      <div class="heading">
-        <div class="heading-intro">
-          @if (get_field('titre'))
-            <h1 class="page-title">@php(the_field('titre'))</h1>
-          @endif
-          <a href="#" class="cta-button">Démonstration</a>
+
+    @include('partials.page-header')
+
+    <section class="section booster">
+      <div class="row">
+        <div class="column medium-6">
+        @if(get_field('video'))
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{get_field('video')}}?rel=0" frameborder="0" allowfullscreen></iframe>
+        @elseif(has_post_thumbnail())
+          @php(the_post_thumbnail('large'))
+        @else
+          <img src="@asset('images/accelerez.jpg')" alt="">
+        @endif
         </div>
-        <div class="heading-column">
+        <div class="column medium-6">
           @php(the_content())
         </div>
-        <div class="heading-column">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio minima nihil, sequi architecto obcaecati corrupti facere sunt ex maiores perspiciatis. Fuga molestiae voluptatum, voluptatibus laborum itaque officia repellendus reprehenderit amet.</p>
-        </div>
       </div>
-    </div>
-    <section class="page-section arguments">
-      <ul class="arguments-items">
-        <li>Simple</li>
-        <li>Rapide</li>
-        <li>Intuitif</li>
-        <li>Innovant</li>
-        <li>Esthétique</li>
-        <li>Valorisant</li>
-      </ul>
     </section>
-    {{-- Clients --}}
-    <section class="page-section">
-      <h2>Ils utilisent Home Planner</h2>
-      <div class="users-carousel owl-carousel">
-        @while ( have_rows('customers') ) @php(the_row())
-          @php($logo = get_sub_field('logo'))
-          @if (!empty($logo))
-            @php
-              // variables
-              $link = get_sub_field('link');
-              $url = $logo['url'];
-              $title = $logo['title'];
-              $alt = $logo['alt'];
-              $caption = $logo['caption'];
 
-              // thumbnail
-              $size = 'thumbnail';
-              $thumb = $logo['sizes'][ $size ];
-            @endphp
-            <a class="users-item" href="{{$link}}" target="_blank">
-              <img src="{{$thumb}}" alt="{{$alt}}">
-            </a>
-          @endif
-        @endwhile
+    @include('partials/sections')
+
+    <section class="home-galerie">
+      <div class="row column">
+        <h2 class="section--title scrollreveal"><span>Galerie</span></h2>
+        @php($pageGallery = new WP_Query( array('page_id' => 16 ) ))
+
+        @if ( $pageGallery->have_posts() )
+
+          @while ( $pageGallery->have_posts() ) @php($pageGallery->the_post())
+            <div class="text-center"><?php the_excerpt(); ?></div>
+          @endwhile
+
+          @php(wp_reset_postdata())
+        @endif
+
+        @php($gallery = new WP_Query( array('post_type' => 'imgallery', 'posts_per_page' => 3 ) ))
+        @if ( $gallery->have_posts() )
+
+          <ul class="row no-bullet">
+
+            @while ( $gallery->have_posts() ) @php($gallery->the_post())
+            @php($image = get_field('image'))
+              <li class="columns large-4"><img class="gallery--item--thumb" src={{ $image['sizes']['gallery'] }} alt={{$image['alt']}} /></li>
+            @endwhile
+
+          </ul>
+
+         @php(wp_reset_postdata())
+        @endif
+
+      <p class="text-center"><a href="@php(the_permalink( 16 ))" class="button">Voir la galerie</a></p>
       </div>
     </section>
+
   @endwhile
+
 @endsection

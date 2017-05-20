@@ -1,0 +1,76 @@
+.gallery--filters {
+  margin: $global-padding 0;
+}
+
+.gallery--filter {
+
+  font-size: .8rem;
+  @include button(false, $body-font-color, darken($body-font-color, 10%), $white, hollow);
+  &.is-checked {
+    @include button(false, $primary-color, $primary-color, $white, solid);
+    font-size: .8rem;
+  }
+
+}
+
+.gallery--items {
+  margin: 1rem -.5rem;
+}
+
+.gallery--item, .grid-sizer {
+  width: grid-column(4);
+}
+.gallery--item {
+  padding: .5rem;
+}
+
+.gallery--item--wrapper {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+
+.gallery--item--thumb {
+  width: 100%;
+}
+
+.gallery--item--overlay {
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  background: rgba(0,0,0,0.8);
+  color: $white;
+  opacity: 0;
+  visibilty: hidden;
+  transition: opacity 300ms ease;
+
+  &--title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+.gallery--item--overlay--container {
+  @include absolute-center;
+  width: 100%;
+  padding: 1rem;
+}
+.gallery--item--wrapper:hover, .gallery--item--wrapper:focus {
+  .gallery--item--overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.gallery--terms {
+  @extend .no-bullet;
+}
+.gallery--term {
+  display: inline-block;
+  color: $primary-color;
+}
+
+.gallery--item--caption {
+  @include element-invisible;
+}

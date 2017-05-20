@@ -1,0 +1,13 @@
+.blog {
+  .hentry {
+    @include card-container;
+
+    .entry-wrapper {
+      @include card-section;
+    }
+
+    .entry-summary {
+      margin-top: $global-padding;
+    }
+  }
+}

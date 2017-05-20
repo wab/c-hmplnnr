@@ -1,13 +1,13 @@
+@import "~foundation-sites/scss/util/util";
+@import "colors";
+
 $enable-flex:           false;
 $main-small-columns:       12;
 $sidebar-small-columns:    4;
 
-$headerHeight: rem-calc(80);
+$header-height: rem-calc(80);
 
 $global-transition: 300ms ease;
-
-// Font Awesome | see: http://fontawesome.io/get-started/
-$fa-font-path:          '~font-awesome/fonts';
 
 // 1. Global
 // ---------
@@ -16,26 +16,16 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2da8a4,
-  secondary: #2b4d7e,
-  primary-light: #58cbb7,
-  primary-dark: #2585a1,
-  secondary-light: #1c739b,
-  secondary-dark: #1e3658,
+  primary: color(primary, base),
+  secondary: color(palette, blue),
   success: #3adb76,
   warning: #ffae00,
   alert: #cc0015,
   focus: #c80d77,
   white: #fff
 );
-$secondary-color: map-get($foundation-palette, secondary);
-$light-gray: #eaeef3;
-$medium-gray: #999;
-$dark-gray: #162637;
-$black: #0d1823;
-$white: #fff;
-$body-background: $white;
-$body-font-color: $dark-gray;
+$body-background: color(background);
+$body-font-color: color(text);
 $body-font-family: 'Raleway', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 2rem;
@@ -46,25 +36,6 @@ $global-radius: 0;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
-
-$header-styles: (
-  small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
-    'h6': ('font-size': 16),
-  ),
-  medium: (
-    'h1': ('font-size': 40),
-    'h2': ('font-size': 30),
-    'h3': ('font-size': 25),
-    'h4': ('font-size': 20),
-    'h5': ('font-size': 20),
-    'h6': ('font-size': 16),
-  ),
-);
 
 $header-color: inherit;
 $header-lineheight: 1.4;

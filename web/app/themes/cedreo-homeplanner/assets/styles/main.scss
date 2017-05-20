@@ -1,18 +1,20 @@
 @import "common/settings";
+@import "common/utils";
 
-// Import npm dependencies
 @import "~foundation-sites/scss/foundation";
 @include foundation-global-styles;
 @include foundation-typography;
 @include foundation-visibility-classes;
 @include foundation-grid;
+@include foundation-forms;
+//@include foundation-button;
 
 @import "common/global";
+@import "common/icons";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
-@import "components/icons";
-@import "components/carousel";
+@import "components/lightgallery";
 @import "components/wp-classes";
 @import "layouts/header";
 @import "layouts/navigation";
@@ -21,3 +23,8 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "pages/accueil";
+@import "pages/gallery";
+@import "pages/tarifs";
+@import "pages/contact";
+

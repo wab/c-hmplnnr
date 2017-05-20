@@ -1,78 +1,101 @@
-$page-header-height: rem-calc(200);
+$banner-height: rem-calc(200);
 
-.page-header {
-  padding: $global-padding 0;
-  height: $page-header-height;
-  background-color: $dark-gray;
-  margin-bottom: $global-margin;
-  @include flex;
-  @include flex-align(center, middle);
-}
-
-.page-heading {
-  font-size: rem-calc(32);
-  font-weight: bold;
+.banner {
+  position: relative;
+  background-image: url(../images/banner-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
   color: $white;
-  text-transform: uppercase;
-}
+  min-height: $banner-height;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 
-.page-title {
-  font-size: rem-calc(32);
-  font-weight: bold;
-}
-.page-section {
-  padding: $global-padding 0;
-
-  &-title {
-    font-size: rem-calc(28);
-    font-weight: bold;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.6);
+    z-index: 0;
+    @include position(0,0, auto, auto);
   }
 
-  &-thumb {
-    @include thumbnail;
-    float: left;
-    margin: 0 $global-padding $global-padding 0;
+  .wrapper {
+    position: relative;
+    z-index: 1;
   }
 
-  &:nth-child(2n + 1) {
-    background: $light-gray;
+  .home & {
+    //background-image: url(../images/banner-home.jpg);
+    min-height: 450px;
+  }
 
-    .page-section-thumb {
-      float: right;
-      margin: 0 0 $global-padding $global-padding;
+  .maintitle {
+    text-transform: uppercase;
+    max-width: $global-width;
+    font-size: 2.4rem;
+
+    .tagline {
+      display: block;
+      font-size: .8em;
+    }
+
+   & + .button {
+      margin-top: $global-padding;
+    }
+
+  }
+
+  .button {
+    @include button(
+      $expand: false,
+      $background: color(primary, base),
+      $background-hover: darken(color(primary, base), 15%),
+      $color: color(white),
+      $style: $button-fill
+    )
+    &.large {
+      font-size: map-get($button-sizes, large);
     }
   }
 }
 
-// Page d'accueil
+.section {
+  @include section-base;
 
-.home {
-  .heading {
-    padding-top: $global-padding;
-    @include flex-grid-row;
-    @include flex-align(center, middle);
+  &:nth-child(even) {
+    background: color(grey, light) url(../images/background-section.jpg) no-repeat;
+    background-size: 100%;
+  }
 
-    &-intro {
-      text-align: center;
-    }
+  &-wrapper {
+    @include section-wrapper;
+  }
 
-    &-column {
-      text-align: justify;
-      @include flex-grid-column(6);
+  &--title {
+    @include section-title;
+  }
+
+  &-main {
+    h2 {
+      @include section-title($border: false);
     }
   }
 
-  .arguments {
-    &-items {
-      @extend %nobullet;
-      @include flex-grid-row;
-      @include flex-align(center, middle);
-      li {
-        text-align: center;
-        font-size: rem-calc(20);
-        font-weight: bold;
-        @include flex-grid-column(2);
-      }
+  h2 {
+    text-align: left;
+    @include section-title($border: false);
+  }
+}
+
+.page {
+  &-section {
+    &-title {
+      @include section-title(color(palette, purple), $border: false);
     }
   }
 }
+

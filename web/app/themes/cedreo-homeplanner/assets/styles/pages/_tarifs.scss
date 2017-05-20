@@ -1,0 +1,140 @@
+$price-gutter: $global-padding / 2;
+
+.section-price {
+  text-align: center;
+
+  &-title {
+    font-size: rem-calc(36);
+    font-weight: bold;
+    @include section-title(currentColor);
+
+    svg {
+      margin: 0 $global-padding / 2;
+      @include icon(1.8em);
+    }
+  }
+
+  &.plan {
+    color: color(palette, purple);
+  }
+
+  &.render {
+    color: color(palette, blue);
+  }
+
+  &.pack {
+    color: color(palette, green);
+  }
+
+  &.subscription {
+    color: $primary-color;
+  }
+
+  .mentions {
+    color: $primary-color;
+  }
+  .download-btn {
+    font-size: map-get($button-sizes, large);
+    @include button(
+      $expand: false,
+      $background: color(palette, pink),
+      $background-hover: darken(color(palette, pink), 15%),
+      $color: color(white),
+      $style: $button-fill
+    );
+  }
+}
+
+@mixin bgcolor() {
+  background: currentColor;
+
+  span, strong {
+    color: color(white);
+  }
+}
+
+%text-plan {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@mixin text-plan($font-size: rem-calc(20)) {
+  @extend %text-plan;
+  font-size: $font-size;
+  line-height: 1.2;
+}
+
+.section-price-contenu {
+  @include flex-grid-row;
+
+  article {
+    margin-bottom: $global-margin;
+    @include flex-grid-column(12);
+
+    @include breakpoint(large) {
+      @include flex-grid-size(6);
+    }
+
+    svg {
+      fill: currentColor;
+      height: rem-calc(50);
+      margin-bottom: - rem-calc(8);
+    }
+
+    .title {
+      margin-bottom: $price-gutter;
+      @include text-plan(rem-calc(38));
+
+      .plan & {
+        @include bgcolor;
+      }
+    }
+
+    .subtitle {
+      margin-bottom: 0;
+      @include text-plan;
+      @include bgcolor;
+    }
+
+    .options {
+      @extend %nobullet;
+      background-color: color(white);
+      padding: $price-gutter;
+
+      li {
+        padding: $price-gutter;
+        @include text-plan;
+
+        + li {
+          border-top: rem-calc(1) solid color(grey, light);
+        }
+      }
+    }
+
+    .price {
+      font-size: rem-calc(30);
+      line-height: 1.2;
+      margin-bottom: $price-gutter;
+      padding: $price-gutter;
+      @include bgcolor;
+
+      strong {
+        font-size: rem-calc(50);
+      }
+
+      .discount {
+        @include text-plan(.8em);
+      }
+
+      .subscription & {
+        margin-bottom: 0;
+      }
+    }
+
+    .desc {
+      background-color: color(white);
+      padding: $price-gutter;
+      @include text-plan(1em);
+    }
+  }
+}

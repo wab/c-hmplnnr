@@ -1,0 +1,172 @@
+.marketing {
+  background-color: color(white);
+}
+.accesdirect--items {
+  @extend .no-bullet;
+  margin-bottom: $global-margin;
+  @include flex;
+  @include flex-align(spaced, middle);
+
+  .chevron {
+    @extend %chevron;
+    display: none;
+  }
+
+  @include breakpoint(medium) {
+    .chevron {
+      display: block;
+    }
+  }
+}
+
+.accesdirect--button {
+  align-items: center;
+  color: color(primary, base);
+  display: flex;
+  flex-basis: 180px;
+  flex-direction: column;
+  font-weight: bold;
+  max-width: 180px;
+  text-transform: uppercase;
+  transition: color 200ms ease;
+
+  & + .accesdirect--button {
+
+    &:before {
+      @extend %chevron;
+      content: '';
+    }
+  }
+
+  &.plan {
+    color: color(palette, purple);
+  }
+
+  &.image {
+    color: color(palette, blue);
+  }
+
+  &.visit {
+    color: color(palette, green);
+  }
+
+  .picto {
+    fill: currentColor;
+    margin-bottom: .5rem;
+    max-height: 3.5rem;
+    transition: transform 200ms ease-in;
+  }
+
+  &:hover .picto {
+    transform: scale(1.1);
+  }
+}
+
+.why--item {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+
+  [class^="icon-"], [class*="icon-"] {
+    font-size: 2em;
+    margin-right: 1rem;
+    position: relative;
+    top: .6rem;
+  }
+}
+
+.pros--secteur {
+  a {
+    color: inherit;
+  }
+  text-align: center;
+
+  &:nth-child(1) {
+    color: color(palette, purple);
+  }
+
+  &:nth-child(2) {
+    color: color(palette, blue);
+  }
+
+  &:nth-child(3) {
+    color: color(palette, green);
+  }
+}
+
+.pros--title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.pros--icon {
+  margin: auto;
+  margin-bottom: .5rem;
+  max-width: 150px;
+
+  .bg {
+    fill: currentColor;
+  }
+}
+
+.pros--items {
+  text-align: left;
+
+  .icon-check {
+    height: 1.5em;
+    position: relative;
+    top: .4em;
+    width: 1.5em;
+  }
+}
+
+.why {
+  color: $secondary-color;
+}
+
+.feature--wrapper {
+  @include flex-grid-row;
+  @include flex-align(spaced, middle);
+}
+.feature--column {
+  @include flex-grid-column(12);
+  @include breakpoint(medium) {
+    @include flex-grid-column(6);
+  }
+}
+
+.booster {
+
+  .section--title {
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &:nth-child(2n + 2) {
+
+    .feature--column:first-child {
+      order: 1;
+    }
+  }
+}
+
+.home-galerie {
+  background-image: url(../images/background-gallery.jpg);
+  background-size: 102%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $white;
+
+  .section--title {
+    color: inherit;
+  }
+
+  .button {
+    font-size: map-get($button-sizes, large);
+    @include button-base;
+    @include button-hollow;
+    @include button-hollow-style(color(white));
+  }
+}

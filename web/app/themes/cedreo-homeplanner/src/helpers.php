@@ -111,3 +111,39 @@ function title()
     }
     return get_the_title();
 }
+
+/* easy excerpt limitation
+*/
+function easy_excerpt($limit) {
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+    if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt);
+    } else {
+        $excerpt = implode(" ",$excerpt);
+    }
+    $excerpt = preg_replace('`[[^]]*]`','',$excerpt) . ' [&hellip;]';
+    return $excerpt;
+}
+
+// Nzv menu wrapper
+function nav_menu_wrap() {
+  // default value of 'items_wrap' is <ul id="%1$s" class="%2$s">%3$s</ul>'
+
+  // open the <ul>, set 'menu_class' and 'menu_id' values
+  $wrap  = '<ul id="%1$s" class="%2$s">';
+
+  // the static link
+  $wrap .= '<li class="menu-item menu-accueil"><a href="'. home_url() .'"><svg class="icon icon-home"><use xlink:href="#icon-home" /></svg></a></li>';
+  // get nav items as configured in /wp-admin/
+  $wrap .= '%3$s';
+  // the static link
+  $wrap .= '<li class="menu-item menu-acces-client"><a href="#"><svg class="icon icon-users"><use xlink:href="#icon-users" /></svg>Accès client</a></li>';
+  // get nav items as configured in /wp-admin/
+
+  // close the <ul>
+  $wrap .= '</ul>';
+
+  // return the result
+  return $wrap;
+}

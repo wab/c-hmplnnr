@@ -1,4 +1,10 @@
-.cta-button {
-  @include button;
-  font-size: rem-calc(20);
+.button {
+  text-transform: uppercase;
+  // Sizes
+  @each $size, $value in map-remove($button-sizes, default) {
+    &.#{$size} {
+      font-size: $value;
+    }
+  }
+
 }

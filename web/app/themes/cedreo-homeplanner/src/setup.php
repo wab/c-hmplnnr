@@ -12,9 +12,15 @@ use Roots\Sage\Template\BladeProvider;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('font', 'https://fonts.googleapis.com/css?family=Raleway:300,400,700', false, null);
+    wp_enqueue_style('font', 'https://fonts.googleapis.com/css?family=Raleway:400,500,700', false, null);
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+
+    wp_register_script('gmaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD9a2X3G9F4F38vb9ZlreUmlnEnc7rSXiE&callback=initMap', [], null, true);
+
+    if (is_page('contact')) {
+        wp_enqueue_script('gmaps');
+    }
 }, 100);
 
 /**
@@ -50,6 +56,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
      */
     add_theme_support('post-thumbnails');
+
+    add_image_size( 'gallery', 350, 500);
 
     /**
      * Enable HTML5 markup support
@@ -147,7 +155,7 @@ add_action('after_setup_theme', function () {
      * Create @asset() Blade directive
      */
     sage('blade')->compiler()->directive('asset', function ($asset) {
-        return '<?= App\\asset_path(\''.trim($asset, '\'"').'\'); ?>';
+        return "<?= App\\asset_path({$asset}); ?>";
     });
 });
 

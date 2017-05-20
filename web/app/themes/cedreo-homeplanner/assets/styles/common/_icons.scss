@@ -1,18 +1,19 @@
-[class^="icon-"], [class*="icon-"] {
+@mixin icon($size: 1em) {
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: $size;
+  height: $size;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+  vertical-align: -0.15em;
+}
+
+[class^="icon-"], [class*="icon-"] {
+  @include icon;
 }
 
 .picto--title {
-  display: inline-block;
-  height: 1.4em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+  @include icon(1.4em);
 }
 
 /* ==========================================
@@ -23,44 +24,44 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
-.icon-3d {
-  width: 0.900390625em;
+.icon-pinterest {
+  width: 0.8571428571428571em;
 }
 
-.icon-chrono {
-  width: 0.939453125em;
-}
-
-.icon-cloud {
-  width: 1.1767578125em;
-}
-
-.icon-qualite {
-  width: 0.9208984375em;
+.icon-d {
+  width: 0.90625em;
 }
 
 .icon-chevron {
   width: 0.34375em;
 }
 
+.icon-chrono {
+  width: 0.9375em;
+}
+
+.icon-cloud {
+  width: 1.1875em;
+}
+
 .icon-facebook {
   width: 0.59375em;
 }
 
-.icon-google-plus {
-  width: 1.28125em;
+.icon-linkedin {
+  width: 0.8571428571428571em;
 }
 
 .icon-key {
   width: 1.4375em;
 }
 
-.icon-pinterest {
-  width: 0.84375em;
-}
-
 .icon-power {
   width: 0.96875em;
+}
+
+.icon-qualite {
+  width: 0.90625em;
 }
 
 .icon-tutos {

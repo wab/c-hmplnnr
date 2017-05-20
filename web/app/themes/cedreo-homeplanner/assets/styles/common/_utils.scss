@@ -1,0 +1,104 @@
+%nobullet {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin position($top: 0, $right: auto, $bottom: auto, $left: 0) {
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+  right: $right;
+  top: $top;
+}
+
+@mixin section-base($background: color(white)) {
+  $padding: $global-padding * 2;
+  background-color: $background;
+  padding: $padding 0;
+  position: relative;
+  z-index: 1;
+
+  > div {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@mixin section-wrapper() {
+  $margin: $global-padding;
+
+  @include grid-column-row;
+
+  .section-thumbnail {
+    background: $white;
+    border: 1px solid rgba(0,0,0,0.2);
+    display: block;
+    margin: 0;
+    margin-bottom: $margin;
+    @include breakpoint(large) {
+      float: right;
+      width: grid-column(6);
+    }
+    @include -zf-breakpoint-value($map: $grid-column-gutter) {
+      margin-left: $-zf-bp-value;
+    }
+  }
+
+  &:nth-child(2n + 2) {
+
+    .section-thumbnail {
+      float: left;
+      margin-left: 0;
+      @include -zf-breakpoint-value($map: $grid-column-gutter) {
+        margin-right: $-zf-bp-value;
+      }
+    }
+  }
+}
+
+@mixin section-title($color: $color-primary, $font-size: rem-calc(30), $border: true) {
+  align-items: center;
+  color: $color;
+  display: flex;
+  font-size: $font-size;
+  justify-content: space-between;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  @if $border {
+
+    span {
+      display: block;
+      padding: 1em;
+      width: auto;
+    }
+
+    &:before, &:after {
+      background: currentColor;
+      content: '';
+      display: block;
+      flex: 1;
+      height: 2px;
+    }
+  }
+}
+
+@mixin section-triangle($color: $light-gray) {
+  $triangle-width: rem-calc(30);
+  $triangle-height: rem-calc(24);
+
+  &:before {
+    background-position: top center;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    height: $triangle-height;
+    top: 0;
+    width: $triangle-width;
+    z-index: 2;
+    @include background-triangle($color);
+    @include horizontal-center;
+  }
+}

@@ -1,0 +1,50 @@
+.contact {
+  &-infos {
+    font-size: rem-calc(18);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &--quote {
+    color: color(palette, purple);
+  }
+
+  &--phone {
+    color: $primary-color;
+  }
+
+  &--opening {
+    color: color(palette, green);
+    text-transform: uppercase;
+  }
+
+  textarea {
+
+    height: rem-calc(450);
+    @include position;
+  }
+
+  .fileinput-button {
+    @include button(
+      $expand: false,
+      $background: color(palette, purple),
+      $background-hover: color(palette, purple),
+      $color: color(white),
+      $style: hollow
+    )
+  }
+
+  .input-submit {
+    @include button(
+      $expand: false,
+      $background: color(primary, base),
+      $background-hover: color(primary, dark),
+      $color: color(white),
+      $style: solid
+    )
+  }
+}
+
+#map {
+  height: rem-calc(500);
+}

@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'fonticon';
+  src:  url('fonts/fonticon.eot?zf68pg');
+  src:  url('fonts/fonticon.eot?zf68pg#iefix') format('embedded-opentype'),
+    url('fonts/fonticon.ttf?zf68pg') format('truetype'),
+    url('fonts/fonticon.woff?zf68pg') format('woff'),
+    url('fonts/fonticon.svg?zf68pg#fonticon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin fonticon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fonticon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fonticon {
+  @include fonticon;
+}
+
+.fonticon-pinterest:before {
+  content: "\f0d2";
+}
+.fonticon-instagram:before {
+  content: "\ea92";
+}
+.fonticon-check:before {
+  content: "\e5ca";
+}
+.fonticon-d:before {
+  content: "\e900";
+}
+.fonticon-arrow:before {
+  content: "\e901";
+}
+.fonticon-check-circle:before {
+  content: "\e902";
+}
+.fonticon-chevron:before {
+  content: "\e903";
+}
+.fonticon-chrono:before {
+  content: "\e904";
+}
+.fonticon-cloud:before {
+  content: "\e905";
+}
+.fonticon-envelop:before {
+  content: "\e906";
+}
+.fonticon-facebook:before {
+  content: "\e907";
+}
+.fonticon-google-plus:before {
+  content: "\e908";
+}
+.fonticon-home:before {
+  content: "\e909";
+}
+.fonticon-info:before {
+  content: "\e90a";
+}
+.fonticon-key:before {
+  content: "\e90b";
+}
+.fonticon-location:before {
+  content: "\e90c";
+}
+.fonticon-power:before {
+  content: "\e93f";
+}
+.fonticon-qualite:before {
+  content: "\e940";
+}
+.fonticon-question-mark:before {
+  content: "\e941";
+}
+.fonticon-search:before {
+  content: "\e942";
+}
+.fonticon-star:before {
+  content: "\e943";
+}
+.fonticon-tag:before {
+  content: "\e944";
+}
+.fonticon-tutos:before {
+  content: "\e945";
+}
+.fonticon-twitter:before {
+  content: "\e946";
+}
+.fonticon-users:before {
+  content: "\e947";
+}
+.fonticon-vector:before {
+  content: "\e948";
+}
+.fonticon-youtube-play:before {
+  content: "\e949";
+}
+

@@ -1,37 +1,22 @@
-/* global sr */
-import ScrollReveal from 'scrollreveal';
-
-window.sr = ScrollReveal();
-
 export default {
   init() {
     // JavaScript to be fired on all pages
-
-    // Add class to <html> if ScrollReveal is supported
-    if (sr.isSupported()) {
-      document.documentElement.classList.add('sr');
-    }
-
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
     $(document).foundation();
 
+    // loader images
+    const imagesElem =  $('img');
+    imagesElem.addClass('invisible');
+    Foundation.onImagesLoaded(imagesElem, () => {
+      imagesElem.removeClass('invisible');
+    });
+
     // navigation mobile
     $('.menu-link').click(() => {
-      $('.navigation').toggleClass('opened');
+      $('.navigation-menu').toggleClass('opened');
     });
-
-    // animation scroll reveal
-    sr.reveal('.scrollreveal', {
-      afterReveal: (domEl) => {
-        domEl.classList.add('animated');
-      },
-    });
-
-    if (document.body.contains(document.querySelector('.page-contenu .hentry'))) {
-      sr.reveal('.page-contenu .hentry > *');
-    }
 
     // Scroll animation speed
     const speed = 200;
