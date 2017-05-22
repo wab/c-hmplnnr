@@ -138,7 +138,7 @@ function nav_menu_wrap() {
   // get nav items as configured in /wp-admin/
   $wrap .= '%3$s';
   // the static link
-  $wrap .= '<li class="menu-item menu-acces-client"><a href="#"><svg class="icon icon-users"><use xlink:href="#icon-users" /></svg>Accès client</a></li>';
+
   // get nav items as configured in /wp-admin/
 
   // close the <ul>

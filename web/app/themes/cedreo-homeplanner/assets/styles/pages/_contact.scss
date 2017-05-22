@@ -1,4 +1,5 @@
-.contact {
+.contact,
+.demonstration {
   &-infos {
     font-size: rem-calc(18);
     font-weight: bold;
@@ -19,7 +20,6 @@
   }
 
   textarea {
-
     height: rem-calc(450);
     @include position;
   }
