@@ -69,33 +69,44 @@ $banner-height: rem-calc(200);
   &:nth-child(even) {
     background: color(grey, light) url(../images/background-section.jpg) no-repeat;
     background-size: 100%;
+
+    .section-thumbnail {
+      @include section-thumbnail;
+    }
+  }
+
+  &:nth-child(odd) {
+    background: color(white);
+
+    .section-thumbnail {
+      @include section-thumbnail(left);
+    }
   }
 
   &-wrapper {
     @include section-wrapper;
+
+    .entry-content {
+      @include grid-column-row;
+
+      h2 {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-contenu {
+    @include section-contenu;
   }
 
   &--title {
     @include section-title;
   }
 
-  &-main {
-    h2 {
-      @include section-title($border: false);
-    }
+  &-title {
+    @include grid-column-row;
+    @include section-title($border: true);
   }
 
-  h2 {
-    text-align: left;
-    @include section-title($border: false);
-  }
-}
-
-.page {
-  &-section {
-    &-title {
-      @include section-title(color(palette, purple), $border: false);
-    }
-  }
 }
 

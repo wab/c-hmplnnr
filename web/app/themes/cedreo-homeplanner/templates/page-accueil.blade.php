@@ -11,23 +11,15 @@
     @include('partials.page-header')
 
     <section class="section booster">
-      <div class="row">
-        <div class="column medium-6">
-        @if(get_field('video'))
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{get_field('video')}}?rel=0" frameborder="0" allowfullscreen></iframe>
-        @elseif(has_post_thumbnail())
-          @php(the_post_thumbnail('large'))
-        @else
-          <img src="@asset('images/accelerez.jpg')" alt="">
-        @endif
-        </div>
-        <div class="column medium-6">
+      <div class="section-wrapper">
+
+        <div class="section-contenu section-contenu--with-thumbnail">
           @php(the_content())
         </div>
       </div>
     </section>
 
-    @include('partials/sections')
+    @include('partials.sections')
 
     <section class="home-galerie">
       <div class="row column">

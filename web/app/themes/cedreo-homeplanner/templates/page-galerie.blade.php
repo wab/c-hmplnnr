@@ -20,7 +20,7 @@
 
   <div class="page-wrapper">
 
-    <div class="columns">
+    <div class="row column">
 
       @if ( ! empty( $terms ) && ! is_wp_error( $terms ) )
         <nav class="gallery--filters">
