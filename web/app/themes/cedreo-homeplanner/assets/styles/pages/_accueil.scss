@@ -152,21 +152,8 @@
   }
 }
 
-.home-galerie {
-  background-image: url(../images/background-gallery.jpg);
-  background-size: 102%;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: $white;
-
-  .section--title {
-    color: inherit;
-  }
-
-  .button {
-    font-size: map-get($button-sizes, large);
-    @include button-base;
-    @include button-hollow;
-    @include button-hollow-style(color(white));
+.customers {
+  &-item {
+    @extend %nobullet;
   }
 }

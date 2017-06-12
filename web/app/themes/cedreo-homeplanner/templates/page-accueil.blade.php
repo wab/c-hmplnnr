@@ -21,38 +21,32 @@
 
     @include('partials.sections')
 
-    <section class="home-galerie">
-      <div class="row column">
-        <h2 class="section--title scrollreveal"><span>Galerie</span></h2>
-        @php($pageGallery = new WP_Query( array('page_id' => 16 ) ))
+    @if(have_rows('customers'))
+      <section class="section">
+        <div class="container">
+          <h2 class="section--title scrollreveal"><span>Il utilisent Home Planner</span></h2>
+            <ul class="customers-items owl-carousel">
+              @while ( have_rows('customers') ) @php(the_row())
+                @php($logo = get_sub_field('logo'))
+                @if(!empty($logo))
+                  @php
+                    // variables
+                    $url = $logo['url'];
+                    $title = $logo['title'];
+                    $alt = $logo['alt'];
+                    $caption = $logo['caption'];
 
-        @if ( $pageGallery->have_posts() )
-
-          @while ( $pageGallery->have_posts() ) @php($pageGallery->the_post())
-            <div class="text-center"><?php the_excerpt(); ?></div>
-          @endwhile
-
-          @php(wp_reset_postdata())
-        @endif
-
-        @php($gallery = new WP_Query( array('post_type' => 'imgallery', 'posts_per_page' => 3 ) ))
-        @if ( $gallery->have_posts() )
-
-          <ul class="row no-bullet">
-
-            @while ( $gallery->have_posts() ) @php($gallery->the_post())
-            @php($image = get_field('image'))
-              <li class="columns large-4"><img class="gallery--item--thumb" src={{ $image['sizes']['gallery'] }} alt={{$image['alt']}} /></li>
-            @endwhile
-
-          </ul>
-
-         @php(wp_reset_postdata())
-        @endif
-
-      <p class="text-center"><a href="@php(the_permalink( 16 ))" class="button">Voir la galerie</a></p>
-      </div>
-    </section>
+                    // thumbnail
+                    $size = 'customers';
+                    $thumb = $logo['sizes'][ $size ];
+                  @endphp
+                  <li class="customers-item"><a href="@php(the_sub_field('link'))"><img src="{{$thumb}}" alt="{{$alt}}"></a></li>
+                @endif
+              @endwhile
+            </ul>
+        </div>
+      </section>
+    @endif
 
   @endwhile
 
