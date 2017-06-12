@@ -40,3 +40,10 @@ $print-transparent-backgrounds: true;
 $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
+
+// Callout
+$callout-border: 0;
+$callout-background-fade: 0%;
+$callout-margin: $global-margin 0;
+$callout-padding: $global-margin * 2;
+$callout-font-color: color(white);

@@ -1,0 +1,45 @@
+.discover {
+
+  &-subtitle {
+    @include section-title;
+  }
+
+  &-items {
+    @include flex-grid-row;
+  }
+
+  &-main {
+    order: 1;
+    @include flex-grid-column(12);
+
+    &-callout {
+      @include callout-base;
+      @include callout-style(color(palette, blue));
+    }
+  }
+
+  &-item {
+    order: 2;
+
+    @include flex-grid-column;
+    @include breakpoint(large) {
+      @include flex-grid-size(4);
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      order: 0;
+    }
+
+    &-title {
+      color: color(palette, blue);
+      font-size: rem-calc(20);
+      font-weight: bold;
+    }
+
+    &-thumbnail {
+      @include thumbnail;
+    }
+  }
+}
