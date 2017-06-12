@@ -1,3 +1,5 @@
+$discover-color: color(palette, pink);
+
 .discover {
 
   &-subtitle {
@@ -14,7 +16,7 @@
 
     &-callout {
       @include callout-base;
-      @include callout-style(color(palette, blue));
+      @include callout-style($discover-color);
     }
   }
 
@@ -33,7 +35,7 @@
     }
 
     &-title {
-      color: color(palette, blue);
+      color: $discover-color;
       font-size: rem-calc(20);
       font-weight: bold;
     }
