@@ -11,9 +11,13 @@ export default {
     carousel.owlCarousel({
       items: 6,
       margin: 10,
-      loor: true,
-      center: true,
-      autoWidth: true,
+      loop: false,
+      center: false,
+      autoWidth: false,
+      dots: true,
+      autoplay: true,
+      stageElement: 'ul',
+      itemElement: 'li',
     })
   },
 };

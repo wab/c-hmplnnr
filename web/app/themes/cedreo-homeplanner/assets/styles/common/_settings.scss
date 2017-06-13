@@ -7,7 +7,7 @@ $sidebar-small-columns:    4;
 
 $header-height: rem-calc(80);
 
-$global-transition: 300ms ease;
+$global-transition: 350ms cubic-bezier(0.8, 0.2, 0.2, 0.8);
 
 // 1. Global
 // ---------

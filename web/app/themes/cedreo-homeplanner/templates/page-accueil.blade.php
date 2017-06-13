@@ -25,7 +25,7 @@
       <section class="section">
         <div class="container">
           <h2 class="section--title scrollreveal"><span>Il utilisent Home Planner</span></h2>
-            <ul class="customers-items owl-carousel">
+            <div class="customers-items owl-carousel">
               @while ( have_rows('customers') ) @php(the_row())
                 @php($logo = get_sub_field('logo'))
                 @if(!empty($logo))
@@ -40,10 +40,10 @@
                     $size = 'customers';
                     $thumb = $logo['sizes'][ $size ];
                   @endphp
-                  <li class="customers-item"><a href="@php(the_sub_field('link'))"><img src="{{$thumb}}" alt="{{$alt}}"></a></li>
+                  <div class="customers-item"><a href="@php(the_sub_field('link'))"><img src="{{$thumb}}" alt="{{$alt}}"></a></div>
                 @endif
               @endwhile
-            </ul>
+            </div>
         </div>
       </section>
     @endif

@@ -7,29 +7,54 @@
  *  Default theme - Owl Carousel CSS File
  */
 
-$color-base:      #869791 !default;
-$color-white:     #FFF !default;
-$color-gray:      #D6D6D6 !default;
+$color-base:      color(primary, base);
+$color-white:     color(white);
+$color-gray:     color(grey, base);
 
 //nav
 
-$nav-color:       $color-white !default;
-$nav-color-hover:   $color-white !default;
-$nav-font-size:     14px !default;
-$nav-rounded:       3px !default;
-$nav-margin:      5px !default;
-$nav-padding:       4px 7px !default;
-$nav-background:    $color-gray !default;
-$nav-background-hover:  $color-base !default;
-$nav-disabled-opacity:  0.5 !default;
+$nav-color:       $color-white;
+$nav-color-hover:   $color-white;
+$nav-font-size:     14px;
+$nav-rounded:       3px;
+$nav-margin:      5px;
+$nav-padding:       4px 7px;
+$nav-background:    $color-gray;
+$nav-background-hover:  $color-base;
+$nav-disabled-opacity:  0.5;
 
 //dots
 
-$dot-width:       10px !default;
-$dot-height:      10px !default;
-$dot-rounded:     30px !default;
-$dot-margin:      5px 7px !default;
-$dot-background:    $color-gray !default;
-$dot-background-active: $color-base !default;
+$dot-size:       rem-calc(12);
+$dot-rounded:     50%;
+$dot-margin:      $global-padding / 4;
+$dot-background:    color(grey, base);
+$dot-background-active: color(primary, base);
 
-@import '~owl.carousel/src/scss/theme';
+.owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+
+    .owl-dot {
+      display: inline-block;
+      zoom: 1;
+
+      span {
+        width: $dot-size;
+        height: $dot-size;
+        margin: $dot-margin;
+        background: $dot-background;
+        display: block;
+        transition: all $global-transition;
+        border-radius: $dot-rounded;
+        border: 1px solid color(white);
+      }
+
+      &.active,
+      &:hover {
+        span {
+          background: $dot-background-active;
+        }
+      }
+    }
+  }
