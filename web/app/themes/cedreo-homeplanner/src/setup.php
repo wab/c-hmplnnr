@@ -59,6 +59,7 @@ add_action('after_setup_theme', function () {
 
     add_image_size( 'gallery', 500, 500);
     add_image_size( 'customers', 400, 400);
+    add_image_size( 'discoverThumb', 500, 280, true);
 
     /**
      * Enable HTML5 markup support

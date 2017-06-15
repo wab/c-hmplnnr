@@ -38,6 +38,9 @@ if (document.body.contains(grid)) {
     iso = new Isotope(grid, {
       itemSelector: '.gallery--item',
       percentPosition: true,
+      stagger: 30,
+      // slow transitions
+      transitionDuration: '0.8s',
       masonry: {
         columnWidth: '.grid-sizer',
       },
@@ -47,6 +50,7 @@ if (document.body.contains(grid)) {
   $('.gallery--items').lightGallery({
     selector: '.gallery--item--overlay',
     cssEasing: 'cubic-bezier(0.680, -0.550, 0.265, 1.550)',
+    speed: 1000,
     subHtmlSelectorRelative: true,
     share: true,
   });

@@ -1,25 +1,3 @@
-/* Ensure elements load hidden before ScrollReveal runs */
-.sr .scrollreveal, .sr .page-contenu .hentry > * { visibility: hidden; }
-
-.type-page a {
-  font-weight: 600;
-  transition: all 300ms ease;
-
-  &:hover, &:focus {
-    text-decoration: underline;
-  }
-}
-
-// images loading
-img.load {
-  opacity: 0;
-  transition: opacity 500ms linear;
-
-  &.loaded {
-    opacity: 1;
-  }
-}
-
 .container {
   max-width: $global-width;
   margin: auto;

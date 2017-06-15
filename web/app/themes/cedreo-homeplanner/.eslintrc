@@ -4,7 +4,8 @@
   "globals": {
     "wp": true,
     "Foundation": true,
-    "ga": true
+    "ga": true,
+    "ScrollReveal": true
   },
   "env": {
     "node": true,

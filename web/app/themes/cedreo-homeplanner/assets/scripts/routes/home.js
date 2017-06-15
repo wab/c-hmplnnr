@@ -10,12 +10,30 @@ export default {
     const carousel = $('.owl-carousel');
     carousel.owlCarousel({
       items: 6,
+      responsive:{
+        0:{
+            items:2,
+            nav:false,
+            dots: false,
+            autoplay: false,
+        },
+        800:{
+            items:4,
+            nav:false,
+            dots: false,
+        },
+        1000:{
+            items:6,
+            nav:false,
+            dots: true,
+            autoplay: true,
+        },
+      },
       margin: 10,
       loop: false,
       center: false,
       autoWidth: false,
-      dots: true,
-      autoplay: true,
+
       stageElement: 'ul',
       itemElement: 'li',
     })

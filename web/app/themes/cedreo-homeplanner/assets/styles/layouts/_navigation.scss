@@ -66,7 +66,7 @@
   // Version mobile
   @include breakpoint(large down) {
     align-items: center;
-    background-color: color(palette, purple);
+    background-color: color(palette, blue);
     color: $white;
     display: flex;
     flex-flow: column nowrap;

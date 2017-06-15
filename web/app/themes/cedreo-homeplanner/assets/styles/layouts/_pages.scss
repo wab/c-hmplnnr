@@ -52,8 +52,8 @@ $banner-height: rem-calc(200);
   .button {
     @include button(
       $expand: false,
-      $background: color(primary, base),
-      $background-hover: darken(color(primary, base), 15%),
+      $background: color(palette, pink),
+      $background-hover: darken(color(palette, pink), 15%),
       $color: color(white),
       $style: $button-fill
     )
@@ -97,6 +97,32 @@ $banner-height: rem-calc(200);
 
   &-contenu {
     @include section-contenu;
+
+    .fa {
+      display: inline-block;
+      font-size: rem-calc(24);
+      line-height: 1em;
+      width: rem-calc(40);
+      text-align: center;
+      float: left;
+      color: color(primary, base);
+      vertical-align: middle;
+    }
+
+    ul {
+      @extend %nobullet;
+      li {
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhbHF1ZV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iLTUzLjQgMjYuNSAzMi44IDI1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC01My40IDI2LjUgMzIuOCAyNSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHRpdGxlPmNoZWNrPC90aXRsZT48cGF0aCBmaWxsPSIjMTVBRkE2IiBkPSJNLTQzLDQ2LjNsMTkuOC0xOS44bDIuNiwyLjZMLTQzLDUxLjVsLTEwLjQtMTAuNGwyLjYtMi42TC00Myw0Ni4zeiIvPjwvc3ZnPg==);
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: rem-calc(25);
+        font-size: rem-calc(18);
+        font-weight: 500;
+        line-height: rem-calc(25);
+        padding-left: rem-calc(40);
+        margin-bottom: rem-calc(10);
+      }
+    }
   }
 
   &--title {

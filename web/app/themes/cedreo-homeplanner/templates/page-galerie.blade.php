@@ -24,7 +24,7 @@
 
       @if ( ! empty( $terms ) && ! is_wp_error( $terms ) )
         <nav class="gallery--filters">
-          <button data-filter="*" class="gallery--filter is-checked">toutes</button>
+          <button data-filter="*" class="gallery--filter is-checked">Toutes</button>
           @foreach ( $terms as $term )
             <button data-filter=".gallerytag-{{$term->slug}}" class="gallery--filter">{{$term->name}}</button>
           @endforeach

@@ -45,7 +45,7 @@
                       $caption = $image['caption'];
 
                       // thumbnail
-                      $size = 'gallery';
+                      $size = 'discoverThumb';
                       $thumb = $image['sizes'][ $size ];
                     @endphp
                     <img src="{{$thumb}}" alt="{{$alt}}" class="discover-item-thumbnail">

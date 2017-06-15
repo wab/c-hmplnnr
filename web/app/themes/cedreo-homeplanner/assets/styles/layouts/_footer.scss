@@ -5,13 +5,6 @@ $footer-color: color(palette, blue);
   background-color: color(grey, base);
   background-size: cover;
   color: $white;
-
-  &:before {
-    background: linear-gradient(90deg, color(palette, red) 0%,  color(palette, red) 16.5%, color(palette, orange) 16.5%, color(palette, orange) 33%, color(palette, yellow) 33%, color(palette, yellow) 49.5%, color(palette, green) 49.5%, color(palette, green) 66%, color(primary, base) 66%, color(primary, base) 84.5%, color(palette, blue) 84.5%, color(palette, blue) 100%);
-    content: '';
-    display: block;
-    height: $footer-gradient-size;
-  }
 }
 
 .ours {

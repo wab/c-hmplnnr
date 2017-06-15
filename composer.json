@@ -81,7 +81,7 @@
       "package": {
         "name": "deliciousbrains/wp-migrate-db-pro",
         "type": "wordpress-plugin",
-        "version": "1.7.1",
+        "version": "1.7.2",
         "dist": {
           "type": "zip",
           "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-latest.zip?licence_key=1b0f680a-0bbb-4da6-bf8f-43d95035be1c&site_url=home-planner.fr"
@@ -146,9 +146,10 @@
     "wpackagist-plugin/google-sitemap-generator": "^4",
     "wpackagist-plugin/wordpress-seo": "^4",
     "wpackagist-plugin/breadcrumb-navxt": "^5",
-    "wpackagist-plugin/jetpack": "^4.6",
+    "wpackagist-plugin/jetpack": "^5",
     "wpackagist-plugin/vaultpress": "^1",
-    "wpackagist-plugin/custom-post-type-ui": "^1.5"
+    "wpackagist-plugin/custom-post-type-ui": "^1.5",
+    "wpackagist-plugin/simple-custom-post-order": "^2.3"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

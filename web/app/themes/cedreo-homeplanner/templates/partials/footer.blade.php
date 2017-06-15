@@ -4,8 +4,8 @@
       <p class="widget--title"><?php bloginfo('title'); ?></p>
       <nav class="nav-footer scrollreveal">
         <ul class="no-bullet nav-footer--menu">
-          <li class="nav-footer--item"><svg class="icon icon-info"><use xlink:href="#icon-info" /></svg> <a href="@php(the_permalink(1704))">Qui sommes-nous ?</a></li>
-          <li class="nav-footer--item"><svg class="icon icon-envelop"><use xlink:href="#icon-envelop" /></svg> <a href="@php(the_permalink(1704))">Contactez-nous</a></li>
+          <li class="nav-footer--item"><svg class="icon icon-info"><use xlink:href="#icon-info" /></svg> <a href="https://cedreo-interactive.com/cedreo/entreprise">Qui sommes-nous ?</a></li>
+          <li class="nav-footer--item"><svg class="icon icon-envelop"><use xlink:href="#icon-envelop" /></svg> <a href="@php(the_permalink(3103))">Contactez-nous</a></li>
         </ul>
       </nav>
     </div>
@@ -47,12 +47,10 @@
     <div class="widget">
       <p class="widget--title">Suivez-nous</p>
       <ul class="reseaux--list no-bullet scrollreveal">
-        <li class="reseaux--item"><button class="reseaux--link" onclick="window.open('https://fr-fr.facebook.com/cedarstudio/')"><svg class="icon-facebook"><use xlink:href="#icon-facebook"></use></svg></button></li>
-        <li class="reseaux--item"><button class="reseaux--link" onclick="window.open('https://www.instagram.com/cedarstudio3d/?hl=fr')"><svg class="icon-instagram"><use xlink:href="#icon-instagram"></use></svg></button></li>
-        <li class="reseaux--item"><button class="reseaux--link" onclick="window.open('https://twitter.com/CedarStudio3D')"><svg class="icon-twitter"><use xlink:href="#icon-twitter"></use></svg></button></li>
-        <li class="reseaux--item"><button class="reseaux--link" onclick="window.open('https://www.pinterest.com/cedar_studio/')"><svg class="icon-pinterest"><use xlink:href="#icon-pinterest"></use></svg></button></li>
-        <li class="reseaux--item"><button class="reseaux--link"><svg class="icon-youtube-play"><use xlink:href="#icon-youtube-play"></use></svg></button></li>
-        <li class="reseaux--item"><button class="reseaux--link" onclick="window.open('https://www.linkedin.com/company-beta/10038563/')"><svg class="icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg></button></li>
+        <li class="reseaux--item"><button class="reseaux--link" onclick="window.open('https://www.facebook.com/cedreohomeplanner/')"><svg class="icon-facebook"><use xlink:href="#icon-facebook"></use></svg></button></li>
+        <li class="reseaux--item"><button class="reseaux--link" onclick="window.open('https://twitter.com/cedreo')"><svg class="icon-twitter"><use xlink:href="#icon-twitter"></use></svg></button></li>
+        <li class="reseaux--item"><button class="reseaux--link" onclick="window.open('https://www.linkedin.com/company/cedreo')"><svg class="icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg></button></li>
+        <li class="reseaux--item"><button class="reseaux--link" onclick="window.open('https://www.youtube.com/user/cedreo')"><svg class="icon-youtube-play"><use xlink:href="#icon-youtube-play"></use></svg></button></li>
       </ul>
       </ul>
     </div>

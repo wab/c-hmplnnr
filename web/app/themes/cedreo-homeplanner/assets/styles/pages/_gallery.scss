@@ -3,14 +3,13 @@
 }
 
 .gallery--filter {
-
   font-size: .8rem;
   @include button(false, $body-font-color, darken($body-font-color, 10%), $white, hollow);
-  &.is-checked {
-    @include button(false, $primary-color, $primary-color, $white, solid);
-    font-size: .8rem;
-  }
 
+  &.is-checked {
+    font-size: .8rem;
+    @include button(false, $primary-color, $primary-color, $white, solid);
+  }
 }
 
 .gallery--items {
@@ -25,8 +24,8 @@
 }
 
 .gallery--item--wrapper {
-  position: relative;
   cursor: pointer;
+  position: relative;
   width: 100%;
 }
 
@@ -35,28 +34,34 @@
 }
 
 .gallery--item--overlay {
-  position: absolute;
-  top: .5rem;
-  left: .5rem;
-  width: calc(100% - 1rem);
-  height: calc(100% - 1rem);
   background: rgba(0,0,0,0.8);
   color: $white;
+  cursor: pointer;
+  height: calc(100% - 1rem);
+  left: .5rem;
   opacity: 0;
-  visibilty: hidden;
+  position: absolute;
+  top: .5rem;
   transition: opacity 300ms ease;
+  width: calc(100% - 1rem);
+  visibilty: hidden;
 
   &--title {
     font-size: 1.2rem;
     font-weight: bold;
   }
+
+  &--icon {
+    font-size: rem-calc(30);
+  }
 }
 .gallery--item--overlay--container {
-  @include absolute-center;
-  width: 100%;
   padding: 1rem;
+  width: 100%;
+  @include absolute-center;
 }
 .gallery--item--wrapper:hover, .gallery--item--wrapper:focus {
+
   .gallery--item--overlay {
     opacity: 1;
     visibility: visible;
@@ -67,8 +72,8 @@
   @extend .no-bullet;
 }
 .gallery--term {
-  display: inline-block;
   color: $primary-color;
+  display: inline-block;
 }
 
 .gallery--item--caption {

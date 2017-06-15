@@ -79,6 +79,7 @@
     "lightgallery": "^1.3.9",
     "masonry-layout": "^4.1.1",
     "owl.carousel": "^2.2.0",
+    "scrollreveal": "^3.3.5",
     "svgxuse": "^1.2.4"
   }
 }

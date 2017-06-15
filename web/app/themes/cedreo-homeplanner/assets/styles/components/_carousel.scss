@@ -32,29 +32,29 @@ $dot-background:    color(grey, base);
 $dot-background-active: color(primary, base);
 
 .owl-dots {
-    text-align: center;
-    -webkit-tap-highlight-color: transparent;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
 
-    .owl-dot {
-      display: inline-block;
-      zoom: 1;
+  .owl-dot {
+    display: inline-block;
+    zoom: 1;
 
+    span {
+      width: $dot-size;
+      height: $dot-size;
+      margin: $dot-margin;
+      background: $dot-background;
+      display: block;
+      transition: all $global-transition;
+      border-radius: $dot-rounded;
+      border: 1px solid color(white);
+    }
+
+    &.active,
+    &:hover {
       span {
-        width: $dot-size;
-        height: $dot-size;
-        margin: $dot-margin;
-        background: $dot-background;
-        display: block;
-        transition: all $global-transition;
-        border-radius: $dot-rounded;
-        border: 1px solid color(white);
-      }
-
-      &.active,
-      &:hover {
-        span {
-          background: $dot-background-active;
-        }
+        background: $dot-background-active;
       }
     }
   }
+}

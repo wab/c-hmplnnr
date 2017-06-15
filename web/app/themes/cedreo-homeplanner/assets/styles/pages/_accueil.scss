@@ -162,11 +162,12 @@ $customer-size: rem-calc(190);
       //@include grid-row;
     }
     .owl-item {
-      //@include grid-column(2);
+      text-align: center;
     }
   }
 
   &-item {
+    display: inline-block;
     height: $customer-size;
     width: $customer-size;
     background: color(white);

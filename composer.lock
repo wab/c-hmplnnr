@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "80d7282a5963c565cde7e9f6c16fc8d1",
-    "content-hash": "cdccafc23d786e7156546527e957a6a1",
+    "hash": "1b609a57af765660ba311b3e54a8b1e8",
+    "content-hash": "13c9a81e0a23f716b7f01c26fd167175",
     "packages": [
         {
             "name": "composer/installers",
@@ -93,7 +93,7 @@
         },
         {
             "name": "deliciousbrains/wp-migrate-db-pro",
-            "version": "1.7.1",
+            "version": "1.7.2",
             "dist": {
                 "type": "zip",
                 "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-latest.zip?licence_key=1b0f680a-0bbb-4da6-bf8f-43d95035be1c&site_url=home-planner.fr",
@@ -585,7 +585,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.5.3.zip",
-                "reference": null,
+                "reference": "tags/1.5.3",
                 "shasum": null
             },
             "require": {
@@ -616,16 +616,16 @@
         },
         {
             "name": "wpackagist-plugin/jetpack",
-            "version": "4.9",
+            "version": "5.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/4.9"
+                "reference": "tags/5.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.4.9.zip",
-                "reference": "tags/4.9",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.5.0.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -645,7 +645,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/ninja-forms.3.1.4.zip",
-                "reference": null,
+                "reference": "tags/3.1.4",
                 "shasum": null
             },
             "require": {
@@ -665,7 +665,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/polylang.2.1.5.zip",
-                "reference": null,
+                "reference": "tags/2.1.5",
                 "shasum": null
             },
             "require": {
@@ -685,7 +685,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/redirection.2.6.2.zip",
-                "reference": null,
+                "reference": "tags/2.6.2",
                 "shasum": null
             },
             "require": {
@@ -715,6 +715,26 @@
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
         },
         {
+            "name": "wpackagist-plugin/simple-custom-post-order",
+            "version": "2.3.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/simple-custom-post-order/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/simple-custom-post-order.zip?timestamp=1489777411",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/simple-custom-post-order/"
+        },
+        {
             "name": "wpackagist-plugin/vaultpress",
             "version": "1.9.0",
             "source": {
@@ -725,7 +745,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/vaultpress.1.9.0.zip",
-                "reference": null,
+                "reference": "tags/1.9.0",
                 "shasum": null
             },
             "require": {
@@ -745,7 +765,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-seo.4.9.zip",
-                "reference": null,
+                "reference": "tags/4.9",
                 "shasum": null
             },
             "require": {
