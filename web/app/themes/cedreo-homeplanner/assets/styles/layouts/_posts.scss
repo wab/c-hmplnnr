@@ -1,13 +1,32 @@
 .blog {
   .hentry {
     @include card-container;
+  }
 
-    .entry-wrapper {
-      @include card-section;
-    }
+  .entry-wrapper {
+    @include card-section;
+  }
+}
 
-    .entry-summary {
-      margin-top: $global-padding;
+.single {
+  .hentry {
+    // max-width: rem-calc(700);
+  }
+}
+
+.entry {
+  &-title {
+    font-size: rem-calc(28);
+  }
+  &-header {
+    margin-bottom: $global-padding;
+  }
+  &-thumbnail {
+    @include thumbnail;
+
+    .excerpt & {
+      float: right;
+      margin: 0 0 $global-padding $global-padding;
     }
   }
 }

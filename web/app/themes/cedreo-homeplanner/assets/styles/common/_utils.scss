@@ -1,5 +1,5 @@
 $section-title-fontsize: (
-  small: rem-calc(18),
+  small: rem-calc(20),
   medium: rem-calc(24),
   large: rem-calc(28)
 );
@@ -71,7 +71,7 @@ $section-title-fontsize: (
   text-transform: uppercase;
   font-weight: 500;
   margin-bottom: $global-padding;
-  @include flex-align(left, middle);
+  @include flex-align(center, middle);
 
   svg {
     margin-right: 1em;
@@ -82,8 +82,6 @@ $section-title-fontsize: (
   }
 
   @include breakpoint(large) {
-
-    @include flex-align(center, middle);
 
     span {
       display: block;

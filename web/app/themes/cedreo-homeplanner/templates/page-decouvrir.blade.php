@@ -11,7 +11,7 @@
     @include('partials.page-header')
 
     <div class="section">
-      <div class="container">
+      <div class="section-wrapper">
 
         @if(get_field('subtitle'))
           <h2 class="discover-subtitle"><span>@php(the_field('subtitle'))</span></h2>

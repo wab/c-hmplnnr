@@ -1,4 +1,4 @@
-$discover-color: color(palette, pink);
+$discover-color: color(primary, base);
 
 .discover {
 
@@ -23,7 +23,7 @@ $discover-color: color(palette, pink);
   &-item {
     order: 2;
 
-    @include flex-grid-column;
+    @include flex-grid-column(12);
     @include breakpoint(large) {
       @include flex-grid-size(4);
     }

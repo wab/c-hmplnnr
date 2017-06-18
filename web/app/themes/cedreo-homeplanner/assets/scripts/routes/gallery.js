@@ -14,6 +14,7 @@ const grid = document.querySelector('.gallery--items');
 const filtersElem = document.querySelector('.gallery--filters');
 
 let iso = {};
+let filterValue = [];
 
 function determineIfElementMatches(element, selector) {
   return element.matches(selector);
@@ -61,8 +62,17 @@ if (document.body.contains(grid)) {
     if (!determineIfElementMatches(event.target, 'button')) {
       return;
     }
-    const filterValue = event.target.getAttribute('data-filter');
+    filterValue = event.target.getAttribute('data-filter');
     iso.arrange({ filter: filterValue });
+    $('.gallery--items').data('lightGallery').destroy(true);
+    const filterClass = `${filterValue} .gallery--item--overlay`
+    $('.gallery--items').lightGallery({
+      selector: filterClass,
+      cssEasing: 'cubic-bezier(0.680, -0.550, 0.265, 1.550)',
+      speed: 1000,
+      subHtmlSelectorRelative: true,
+      share: true,
+    });
   });
 
   // change is-checked class on buttons
@@ -74,18 +84,4 @@ if (document.body.contains(grid)) {
     radioButtonGroup(buttonGroup);
   }
 
-  let paged = 2;
-  $('body').on('click', '.load-more', () => {
-    $.post(ajaxurl, { action: 'load_more', paged },
-      (response) => {
-        paged += 1;
-        const tempelement = document.createElement('div');
-        tempelement.insertAdjacentHTML('beforeend', response);
-        const elements = tempelement.querySelectorAll('.gallery--item');
-        iso.insert(elements);
-      }
-    );
-  });
-} else {
-  $('.load-more').addClass('hide');
 }

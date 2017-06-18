@@ -58,7 +58,7 @@
   <div class="ours text-center">
     <div class="row column">
       <div class="scrollreveal">
-        <a href="@php(the_permalink(1702))">Mentions légales</a> - &copy; {{date('Y')}} Cedar Studio
+        <a href="@php(the_permalink(8225))">Mentions légales</a> - &copy; {{date('Y')}} Cedar Studio
       </div>
     </div>
   </div>
