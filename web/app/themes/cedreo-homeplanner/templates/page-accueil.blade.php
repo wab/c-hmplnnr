@@ -34,7 +34,7 @@
 
     @include('partials.sections')
 
-    @if(have_rows('customers'))
+    {{-- @if(have_rows('customers'))
       <section class="section">
         <div class="section-wrapper">
           <h2 class="section--title scrollreveal"><span>Ils utilisent Home Planner</span></h2>
@@ -59,7 +59,7 @@
             </div>
         </div>
       </section>
-    @endif
+    @endif --}}
 
   @endwhile
 

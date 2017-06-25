@@ -35,7 +35,7 @@ $discover-color: color(primary, base);
     }
 
     &-title {
-      color: $discover-color;
+      color: color(grey, medium);
       font-size: rem-calc(20);
       font-weight: bold;
     }
