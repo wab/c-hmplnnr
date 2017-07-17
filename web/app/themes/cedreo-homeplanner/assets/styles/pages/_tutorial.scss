@@ -1,0 +1,37 @@
+$tutoriel-color: color(primary, base);
+
+.tutoriel {
+
+  &-callout {
+    @include callout-base;
+    @include callout-style($discover-color);
+  }
+
+  &-section {
+    &-title {
+      text-align: center;
+    }
+  }
+
+  &-items {
+    @include flex-grid-row;
+  }
+
+  &-item {
+
+    @include flex-grid-column(12);
+    @include breakpoint(large) {
+      @include flex-grid-size(4);
+    }
+
+    &-title {
+      color: color(grey, medium);
+      font-size: rem-calc(20);
+      font-weight: bold;
+    }
+
+    &-thumbnail {
+      @include thumbnail;
+    }
+  }
+}

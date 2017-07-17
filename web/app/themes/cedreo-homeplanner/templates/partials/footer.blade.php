@@ -28,7 +28,7 @@
             <strong class="textcolor"><?php the_date(); ?></strong>
             <p class="post--title"><?php the_title(); ?></p>
             <?= App\easy_excerpt(20); ?><br>
-            <a href="<?php the_permalink(); ?>">&rarr; <?php _e('Read', 'cedar-studio'); ?></a>
+            <a href="<?php the_permalink(); ?>">&rarr; <?php _e('Continued', 'sage'); ?></a>
           </li>
         <?php endwhile; ?>
         <!-- end of the loop -->
@@ -58,7 +58,7 @@
   <div class="ours text-center">
     <div class="row column">
       <div class="scrollreveal">
-        <a href="@php(the_permalink(8225))">Mentions légales</a> - &copy; {{date('Y')}} Cedar Studio
+        <a href="@php(the_permalink(8225))">Mentions légales</a> - &copy; {{date('Y')}} Cedreo
       </div>
     </div>
   </div>
