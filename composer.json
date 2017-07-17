@@ -144,7 +144,7 @@
     "wpackagist-plugin/redirection": "^2.4",
     "wpackagist-plugin/akismet": "^3",
     "wpackagist-plugin/google-sitemap-generator": "^4",
-    "wpackagist-plugin/wordpress-seo": "^4",
+    "wpackagist-plugin/wordpress-seo": "^5",
     "wpackagist-plugin/breadcrumb-navxt": "^5",
     "wpackagist-plugin/jetpack": "^5",
     "wpackagist-plugin/vaultpress": "^1",
