@@ -22,7 +22,7 @@
           @while ( have_rows('section') ) @php(the_row())
             <section class="tutoriel-section">
               @if(get_sub_field('section-title'))
-                <h2 class="tutoriel-section-title">@php(the_sub_field('section-title'))</h2>
+                <h2 class="tutoriel-section-title"><span>@php(the_sub_field('section-title'))</span></h2>
               @endif
               @if(have_rows('section-items'))
               <div class="tutoriel-items">
@@ -35,6 +35,7 @@
                           @php(the_sub_field('titre'))
                         </h3>
                       @endif
+                      @php($document = get_sub_field('document'))
                       @if(!empty($image))
                         @php
                           // variables
@@ -47,16 +48,23 @@
                           $size = 'discoverThumb';
                           $thumb = $image['sizes'][ $size ];
                         @endphp
-                        <img src="{{$thumb}}" alt="{{$alt}}" class="tutoriel-item-thumbnail">
+                        @if( $document )
+                          <a href="{{$document['url']}}">
+                        @endif
+                          <img src="{{$thumb}}" alt="{{$alt}}" class="tutoriel-item-thumbnail">
+                        @if( $document )
+                          </a>
+                        @endif
                       @endif
                       @if(get_sub_field('description'))
-                      <div class="tutoriel-item-description">
-                        @php(the_sub_field('description'))
-                      </div>
+                        <p class="tutoriel-item-description">
+                          @php(the_sub_field('description'))
+                        </p>
                       @endif
-                      @php($document = get_sub_field('document'))
                       @if( $document )
-                        <a href="{{$document['url']}}">document</a>
+                        <p class="tutoriel-link">
+                          <i class="fa fa-download"></i>&nbsp;<a href="{{$document['url']}}">Téléchargez le pdf</i></a>
+                        </p>
                       @endif
                     </article>
                   </div>

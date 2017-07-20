@@ -30,6 +30,25 @@ $section-title-fontsize: (
   }
 }
 
+@mixin section-alternate {
+  &:nth-child(even) {
+    background: color(grey, light) url(../images/background-section.jpg) no-repeat;
+    background-size: 100%;
+
+    .section-thumbnail {
+      @include section-thumbnail;
+    }
+  }
+
+  &:nth-child(odd) {
+    background: color(white);
+
+    .section-thumbnail {
+      @include section-thumbnail(left);
+    }
+  }
+}
+
 @mixin section-wrapper() {
   @include flex-grid-row;
   @include flex-align(center, top);

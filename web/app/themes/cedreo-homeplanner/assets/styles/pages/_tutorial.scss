@@ -1,15 +1,13 @@
-$tutoriel-color: color(primary, base);
+$tutoriel-color: color(primary, dark);
 
 .tutoriel {
 
-  &-callout {
-    @include callout-base;
-    @include callout-style($discover-color);
-  }
-
   &-section {
+    @include section-base
+    @include section-alternate;;
     &-title {
-      text-align: center;
+      @include grid-column-row;
+      @include section-title;
     }
   }
 
@@ -33,5 +31,13 @@ $tutoriel-color: color(primary, base);
     &-thumbnail {
       @include thumbnail;
     }
+  }
+
+  &-article {
+    margin-bottom: $global-padding;
+  }
+
+  &-link {
+    color: color(text);
   }
 }

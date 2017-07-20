@@ -4,7 +4,7 @@
       <p class="widget--title"><?php bloginfo('title'); ?></p>
       <nav class="nav-footer scrollreveal">
         <ul class="no-bullet nav-footer--menu">
-          <li class="nav-footer--item"><svg class="icon icon-info"><use xlink:href="#icon-info" /></svg> <a href="https://cedreo-interactive.com/cedreo/entreprise">Qui sommes-nous ?</a></li>
+          <li class="nav-footer--item"><svg class="icon icon-info"><use xlink:href="#icon-info" /></svg> <a href="https://cedreo-interactive.com/cedreo/entreprise" target="_blank">Qui sommes-nous ?</a></li>
           <li class="nav-footer--item"><svg class="icon icon-envelop"><use xlink:href="#icon-envelop" /></svg> <a href="@php(the_permalink(3103))">Contactez-nous</a></li>
         </ul>
       </nav>
