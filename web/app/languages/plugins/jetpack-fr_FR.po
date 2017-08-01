@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Jetpack by WordPress.com - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-05-09 13:00:45+0000\n"
+"PO-Revision-Date: 2017-06-28 10:59:10+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1330,7 +1330,7 @@ msgstr "Nouveau service gratuit&nbsp;: afficher les taux d’expédition de USPS
 
 #: class.frame-nonce-preview.php:113
 msgid "Sorry, you are not allowed to preview drafts."
-msgstr "Vous n’êtes pas autorisé(e) à voir les brouillons."
+msgstr "Vous n’êtes pas autorisé·e à voir les brouillons."
 
 #: _inc/lib/class.core-rest-api-endpoints.php:1181
 msgid "Use Markdown for posts."
@@ -10496,9 +10496,9 @@ msgid ""
 msgstr ""
 "Bonjour,\n"
 "\n"
-"Vous avez été invité(e) à rejoindre « %1$s » sur\n"
+"Vous avez été invité·e· à rejoindre « %1$s » sur\n"
 "%2$s en tant que %3$s. \n"
-"Veuillez cliquer sur le lien suivant pour confirmer l'invitation :\n"
+"Veuillez cliquer sur le lien suivant pour confirmer l’invitation :\n"
 "%4$s"
 
 #: json-endpoints/class.wpcom-json-api-update-comment-endpoint.php:137
