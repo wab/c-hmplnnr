@@ -30,3 +30,9 @@
     }
   }
 }
+
+.form-submit {
+  input[type="submit"] {
+    @include button;
+  }
+}
