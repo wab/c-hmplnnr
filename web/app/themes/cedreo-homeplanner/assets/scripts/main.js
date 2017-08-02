@@ -12,6 +12,7 @@ import 'foundation-sites/js/foundation.util.triggers';
 import 'foundation-sites/js/foundation.util.motion';
 import 'foundation-sites/js/foundation.util.timerAndImageLoader';
 import 'foundation-sites/js/foundation.responsiveToggle';
+import 'foundation-sites/js/foundation.sticky';
 
 /** import local dependencies */
 import Router from './util/Router';

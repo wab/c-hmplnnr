@@ -1,0 +1,15 @@
+.widget_categories {
+  ul {
+    @include menu-base;
+    @include menu-direction(vertical);
+
+    li {
+      border-bottom: 1px solid color(grey, light);
+    }
+
+    .current-cat a {
+      background: $primary-color;
+      color: color(white);
+    }
+  }
+}

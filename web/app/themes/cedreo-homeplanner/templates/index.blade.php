@@ -4,7 +4,7 @@
   @include('partials.page-header')
   <div class="section">
     <div class="row">
-      <div class="columns medium-8">
+      <div class="columns medium-8" id="main">
         @if (!have_posts())
           <div class="alert alert-warning">
             {{ __('Sorry, no results were found.', 'sage') }}
@@ -19,8 +19,8 @@
         {!! get_the_posts_navigation() !!}
 
       </div>
-      <div class="columns medium-4">
-        <aside class="sidebar">
+      <div class="columns medium-4" data-sticky-container>
+        <aside class="sidebar" data-sticky data-anchor="main">
           @include('partials.sidebar')
         </aside>
       </div>
