@@ -20,6 +20,7 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 import galerie from './routes/gallery';
+import virtualGallery from './routes/gallery-virtual';
 
 /**
  * Populate Router instance with DOM routes
@@ -33,6 +34,7 @@ const routes = new Router({
   /** About Us page, note the change from about-us to aboutUs. */
   aboutUs,
   galerie,
+  virtualGallery,
 });
 
 /** Load Events */
