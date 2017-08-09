@@ -7,7 +7,7 @@
   }
 
   &--quote {
-    color: color(palette, purple);
+    color: color(primary, dark);
   }
 
   &--phone {
@@ -15,7 +15,7 @@
   }
 
   &--opening {
-    color: color(palette, green);
+    color: color(primary, light);
     text-transform: uppercase;
   }
 

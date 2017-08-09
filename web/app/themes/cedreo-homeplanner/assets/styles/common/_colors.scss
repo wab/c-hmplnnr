@@ -8,8 +8,8 @@ $colors: (
   text: #333,
   primary: (
     base: $color-primary,
-    light: lighten($color-primary, 15%),
-    dark: darken($color-primary, 15%),
+    light: lighten($color-primary, 10%),
+    dark: darken($color-primary, 10%),
     trans: transparentize($color-primary, 0.5)
   ),
   palette: (
