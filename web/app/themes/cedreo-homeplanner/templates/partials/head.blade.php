@@ -5,4 +5,6 @@
   @include('partials.favicons')
   <script src="https://use.fontawesome.com/9c0aacb12f.js"></script>
   @php(wp_head())
+
+  @include('partials.hotjar')
 </head>
