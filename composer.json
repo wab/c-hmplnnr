@@ -17,7 +17,13 @@
     }
   ],
   "keywords": [
-    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
+    "bedrock",
+    "roots",
+    "wordpress",
+    "stack",
+    "composer",
+    "vagrant",
+    "wp"
   ],
   "support": {
     "issues": "https://github.com/roots/bedrock/issues",
@@ -31,7 +37,7 @@
       "type": "composer",
       "url": "https://wpackagist.org"
     },
-        {
+    {
       "type": "package",
       "package": {
         "name": "toolbox-plugin/acf-repeater",
@@ -41,7 +47,7 @@
           "type": "zip",
           "url": "https://github.com/wab/acf-repeater/archive/master.zip"
         },
-        "require" : {
+        "require": {
           "composer/installers": "v1.0.12"
         }
       }
@@ -56,7 +62,7 @@
           "type": "zip",
           "url": "https://github.com/wab/acf-flexible-content/archive/master.zip"
         },
-        "require" : {
+        "require": {
           "composer/installers": "v1.0.12"
         }
       }
@@ -71,7 +77,7 @@
           "type": "zip",
           "url": "https://github.com/wab/acf-gallery/archive/master.zip"
         },
-        "require" : {
+        "require": {
           "composer/installers": "v1.0.12"
         }
       }
@@ -130,22 +136,22 @@
     "johnpbloch/wordpress": "^4.7",
     "roots/wp-password-bcrypt": "^1",
     "roots/soil": "^3.7",
-    "toolbox-plugin/acf-repeater":  "1.1.1",
-    "toolbox-plugin/acf-flexible-content":  "1.1.1",
-    "toolbox-plugin/acf-gallery":  "1.1.1",
+    "toolbox-plugin/acf-repeater": "1.1.1",
+    "toolbox-plugin/acf-flexible-content": "1.1.1",
+    "toolbox-plugin/acf-gallery": "1.1.1",
     "deliciousbrains/wp-migrate-db-pro": "*",
     "deliciousbrains/wp-migrate-db-pro-media-files": "*",
     "deliciousbrains/wp-migrate-db-pro-cli": "*",
     "wpackagist-plugin/advanced-custom-fields": "^4",
-    "wpackagist-plugin/autodescription": "^2.7",
+    "wpackagist-plugin/autodescription": "^3",
     "wpackagist-plugin/polylang": "^2",
     "wpackagist-plugin/ninja-forms": "^3",
-    "wpackagist-plugin/regenerate-thumbnails": "^2",
+    "wpackagist-plugin/regenerate-thumbnails": "^3",
     "wpackagist-plugin/redirection": "^2.4",
-    "wpackagist-plugin/akismet": "^3",
+    "wpackagist-plugin/akismet": "^4",
     "wpackagist-plugin/google-sitemap-generator": "^4",
-    "wpackagist-plugin/wordpress-seo": "^5",
-    "wpackagist-plugin/breadcrumb-navxt": "^5",
+    "wpackagist-plugin/wordpress-seo": "^6",
+    "wpackagist-plugin/breadcrumb-navxt": "^6",
     "wpackagist-plugin/jetpack": "^5",
     "wpackagist-plugin/vaultpress": "^1",
     "wpackagist-plugin/custom-post-type-ui": "^1.5",
@@ -156,9 +162,15 @@
   },
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "web/app/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "web/app/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
     },
     "wordpress-install-dir": "web/wp"
   },
